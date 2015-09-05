@@ -1,6 +1,21 @@
 # TracknameParser
 
-TODO: Write a gem description
+Parses the common dance music trackname into Artist, Trackname, Remix, and Label
+
+#### Example:
+```ruby
+sample_track_name = "D-Unity - Out Loud (Oscar L Remix) [UNITY] "
+
+parsed_track_name = TracknameParser.parse(sample_track_name)
+
+# parsed_track_name = {
+#   artist: 'D-Unity',
+#   name:   'Out Loud',
+#   remix:  'Oscar L Remix',
+#   label:  'UNITY'
+# }
+```
+
 
 ## Installation
 
