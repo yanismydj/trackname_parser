@@ -24,4 +24,16 @@ describe TracknameParser do
       expect(TracknameParser.parse(sample_track_name)[:label]).to eq("UNITY")
     end
   end
+
+  context 'no label' do
+    let(:sample_track_name) { "D-Unity - Out Loud (Oscar L Remix) " }
+
+    it 'returns the name' do
+      expect(TracknameParser.parse(sample_track_name)[:artist]).to eq("D-Unity")
+    end
+
+    it 'returns the label' do
+      expect(TracknameParser.parse(sample_track_name)[:label]).to eq("")
+    end
+  end
 end
